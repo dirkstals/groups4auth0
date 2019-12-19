@@ -1,0 +1,38 @@
+{
+  "name": "auth0-sandbox",
+  "version": "0.1.0",
+  "description": "Sandbox for Auth0 extension",
+  "author": "miaa",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "deploy": "npm run build",
+    "git:push": "git commit -am $npm_package_version && git push",
+    "replace:version": "replace-in-file '/(\\d+\\.\\d+\\.\\d+)/g' $npm_package_version webtask.json --isRegex",
+    "reset:version": "git reset HEAD^ && git tag -d v$npm_package_version",
+    "start": "env $(cat .env) nodemon --watch src --exec babel-node index.js",
+    "postversion": "npm run reset:version && npm run replace:version && npm run deploy && npm run git:push"
+  },
+  "keywords": [
+    "auth0",
+    "extension"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "auth0-extension-express-tools": "^1.1.9",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2",
+    "replace-in-file": "^5.0.2",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
