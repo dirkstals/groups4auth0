@@ -1,6 +1,6 @@
 {
   "name": "auth0-sandbox",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Sandbox for Auth0 extension",
   "author": "miaa",
   "main": "index.js",
