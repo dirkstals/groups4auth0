@@ -1,7 +1,7 @@
 {
   "title": "Groups 4 Auth0",
   "name": "groups4auth0",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "miaaguard",
   "description": "This is an Auth0 extension for accessing miaa Guard Private Groups.",
   "type": "application",
