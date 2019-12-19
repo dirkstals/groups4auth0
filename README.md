@@ -1,5 +1,5 @@
 
-# Auth0 Sandbox Extension
+# Auth0 Extension for miaa Guard
 
 ## Requirements
 
