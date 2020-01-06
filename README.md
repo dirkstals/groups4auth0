@@ -18,10 +18,10 @@ npm install
 
 ## Development
 
-1 environment variables is required. 
+1 environment variable is required. 
 - `CDN`, where your files are hosted.
 
-Create a `.env` file with those the variable inside.
+Create a `.env` file with the variable inside.
 
 ```
 CDN=https://your-cdn-host/your-optional-subfolder
@@ -55,9 +55,7 @@ After the versioning is done it will continue with undoing the current git commi
 
 The script will then sync the version of `webpack.json` to the newly updated version in `package.json`.
 
-After this it will start the build, which will generate files in the dist folder (for the client) and a `build/bundle.js` file for the server.
+After this it will start the build, which will create a `build/bundle.js` file.
 
-Once the build is completed, it will try to upload the dist folder to the S3 Bucket which was provided as an environment variable.
-
-At last all changed files will be commited and pushed to the git repo.
+At last, all changed files will be commited and pushed to the git repo.
 
